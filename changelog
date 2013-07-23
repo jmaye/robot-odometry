@@ -1,0 +1,5 @@
+robot-odometry (0.1-1) lucid; urgency=low
+
+  * Initial release
+
+ -- Jerome Maye <jerome.maye@mavt.ethz.ch>  Thu, 16 May 2013 10:09:12 +0000
