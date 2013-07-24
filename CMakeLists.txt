@@ -59,7 +59,7 @@ remake_distribute_deb(
   DISTRIBUTION lucid
   SECTION libs
   UPLOAD ppa:jmaye/ethz
-  DEPENDS remake doxygen pkg-config libeigen3-dev libgtest-dev
+  DEPENDS remake doxygen pkg-config libeigen3-dev
   PASS CMAKE_BUILD_TYPE ROBOT_ODOMETRY_GIT_REVISION
 )
 
@@ -67,6 +67,6 @@ remake_distribute_deb(
   DISTRIBUTION precise
   SECTION libs
   UPLOAD ppa:jmaye/ethz
-  DEPENDS remake doxygen pkg-config libeigen3-dev libgtest-dev
+  DEPENDS remake doxygen pkg-config libeigen3-dev
   PASS CMAKE_BUILD_TYPE ROBOT_ODOMETRY_GIT_REVISION
 )

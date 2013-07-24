@@ -1,3 +1,9 @@
+robot-odometry (0.1-3) lucid; urgency=low
+
+  * kick out gtest from build 
+
+ -- Jerome Maye <jerome.maye@mavt.ethz.ch>  Wed, 24 Jul 2013 11:56:44 +0200
+
 robot-odometry (0.1-2) lucid; urgency=low
 
   * adding dependency on gtest 
