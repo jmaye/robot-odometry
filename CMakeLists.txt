@@ -40,7 +40,7 @@ remake_pack_deb(
 remake_pack_deb(
   COMPONENT janeth-dev
   DESCRIPTION "JanETH specific odometry development headers."
-  DEPENDS robot-odometry-dev
+  DEPENDS robot-odometry-janeth robot-odometry-dev
 )
 
 remake_pack_deb(

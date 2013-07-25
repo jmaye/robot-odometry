@@ -67,10 +67,6 @@ namespace janeth {
     return ackermannParameters_.wheelBase;
   }
 
-  double JanethOdometryKalmanFilter::getDMIDistance() const {
-    return janethParameters_.dmiDistance;
-  }
-
   double JanethOdometryKalmanFilter::getRearLeftWheelTranslationalVelocity(
       double x) const {
     return JanethOdometry::getRearLeftWheelTranslationalVelocity(x);

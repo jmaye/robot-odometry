@@ -53,8 +53,7 @@ TEST(JanethOdometryCalibrationTestSuite, testAckermannOdometryKalmanFilter) {
   DifferentialOdometry::Parameters diffParams = {0.285, 0.285, 0.285, 0.285,
     1.285, 1.285, 0.000045};
   AckermannOdometry::Parameters ackParams = {2.6996375777616732};
-  JanethOdometry::Parameters janethParams = {0.1, 0.1, 0.1, 0.1, 0, 1, 0, 0,
-    0.6};
+  JanethOdometry::Parameters janethParams = {0.1, 0.1, 0.1, 0.1, 0, 1, 0, 0};
   KalmanFilter::Parameters kfParams = {Eigen::Matrix2d::Identity()};
   DifferentialKalmanFilter::Parameters diffKfParams = {0.1, 0.1};
   AckermannKalmanFilter::Parameters ackKfParams = {0.1, 0.1, 0.1};

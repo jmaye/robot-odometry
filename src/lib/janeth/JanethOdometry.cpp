@@ -91,7 +91,7 @@ namespace janeth {
         differentialParameters_.frontWheelTrack * 0.5 *
         std::tan(trueSteering)));
       const Eigen::MatrixXd A = (Eigen::MatrixXd(5, 2)
-        << 1, -janethParameters_.dmiDistance,
+        << 1, -differentialParameters_.rearWheelTrack * 0.5,
         1, -differentialParameters_.rearWheelTrack * 0.5,
         1, differentialParameters_.rearWheelTrack * 0.5,
         1, -differentialParameters_.frontWheelTrack * 0.5,
@@ -136,9 +136,9 @@ namespace janeth {
 
   ::std::ostream& operator<<(::std::ostream& os, const
       JanethOdometry::Parameters& params) {
-    return os << params.dmiDistance << " " << params.k_rl << " " << params.k_rr
-      << " " << params.k_fl << " " << params.k_fr << " " << params.a0 << " "
-      << params.a1 << " " << params.a2 << " " << params.a3;
+    return os << " " << params.k_rl << " " << params.k_rr << " " << params.k_fl
+      << " " << params.k_fr << " " << params.a0 << " " << params.a1 << " "
+      << params.a2 << " " << params.a3;
   }
 
 }

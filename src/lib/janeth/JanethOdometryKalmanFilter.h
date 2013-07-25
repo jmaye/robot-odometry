@@ -96,8 +96,6 @@ namespace janeth {
     virtual double getFrontWheelTrack() const;
     /// Returns the wheel base
     virtual double getWheelBase() const;
-    /// Returns the DMI distance to odometry center
-    virtual double getDMIDistance() const;
     /// Returns the corrected rear left wheel translational velocity
     virtual double getRearLeftWheelTranslationalVelocity(double x) const;
     /// Returns the corrected rear right wheel translational velocity

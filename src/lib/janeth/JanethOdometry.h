@@ -44,8 +44,6 @@ namespace janeth {
       */
     /// JanETH odometry parameters
     struct Parameters {
-      /// Odometry center to DMI distance [m]
-      double dmiDistance;
       /// Correction factor for rear left wheel
       double k_rl;
       /// Correction factor for rear right wheel
@@ -64,10 +62,9 @@ namespace janeth {
       double a3;
       /// Equality operator for comparing parameters
       bool operator == (const Parameters &other) const {
-        return (dmiDistance == other.dmiDistance) && (k_rl == other.k_rl) &&
-          (k_rr == other.k_rr) && (k_fl == other.k_fl) &&
-          (k_fr == other.k_fr) && (a0 == other.a0) && (a1 == other.a1) &&
-          (a2 == other.a2) && (a3 == other.a3);
+        return (k_rl == other.k_rl) && (k_rr == other.k_rr) &&
+          (k_fl == other.k_fl) && (k_fr == other.k_fr) && (a0 == other.a0) &&
+          (a1 == other.a1) && (a2 == other.a2) && (a3 == other.a3);
       }
     };
     /// Grand Parent type

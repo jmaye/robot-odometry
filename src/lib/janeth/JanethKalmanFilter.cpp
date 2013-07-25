@@ -62,7 +62,8 @@ namespace janeth {
       const double dmiDisplacement = dmi - lastDMIMeasurement_;
       updateMeasurement(dmiDisplacement,
         janethKalmanFilterParameters_.dmiVariance,
-        (Eigen::Matrix<double, 1, 2>() << 1, -getDMIDistance()).finished(),
+        (Eigen::Matrix<double, 1, 2>()
+        << 1, -getRearWheelTrack() * 0.5).finished(),
         timestamp);
     }
     lastDMIMeasurement_ = dmi;

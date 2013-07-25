@@ -113,8 +113,6 @@ namespace janeth {
     /** \name Protected methods
       @{
       */
-    /// Returns the DMI distance to odometry center
-    virtual double getDMIDistance() const = 0;
     /// Returns the corrected rear left wheel translational velocity
     virtual double getRearLeftWheelTranslationalVelocity(double x) const = 0;
     /// Returns the corrected rear right wheel translational velocity

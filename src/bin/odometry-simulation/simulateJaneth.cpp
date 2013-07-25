@@ -49,14 +49,14 @@ int main(int argc, char** argv) {
   DifferentialOdometry::Parameters diffParams = {0.285, 0.285, 0.285, 0.285,
     1.285, 1.285, 0.000045};
   AckermannOdometry::Parameters ackParams = {2.6996375777616732};
-  JanethOdometry::Parameters janethParams = {0.65, 1.0, 1.0, 1.0, 1.0, 0, 1, 0,
+  JanethOdometry::Parameters janethParams = {1.0, 1.0, 1.0, 1.0, 0, 1, 0,
     0};
   JanethOdometry odometry(diffParams, ackParams, janethParams);
   double timestamp = 0;
   std::ofstream janethOdoFile("janethOdo.txt");
   double dmi = 0;
   for (auto it = u_true.cbegin(); it != u_true.cend(); ++it) {
-    dmi += ((*it)(0) - (*it)(2) * janethParams.dmiDistance) * T;
+    dmi += ((*it)(0) - (*it)(2) * diffParams.rearWheelTrack * 0.5) * T;
     const double steering = atan(ackParams.wheelBase * (*it)(2) / (*it)(0));
     const double phi_l = std::atan(std::tan(steering) * ackParams.wheelBase /
       (ackParams.wheelBase - diffParams.frontWheelTrack * 0.5 *
@@ -99,7 +99,7 @@ int main(int argc, char** argv) {
       * 0.5) / cos(phi_l);
     const double vFrontRight = ((*it)(0) + (*it)(2) * diffParams.frontWheelTrack
       * 0.5) / cos(phi_r);
-    dmi += ((*it)(0) - (*it)(2) * janethParams.dmiDistance) * T;
+    dmi += ((*it)(0) - (*it)(2) * diffParams.rearWheelTrack * 0.5) * T;
     kfOdometry.updateDMIMeasurement(dmi, timestamp);
     kfOdometry.updateRearWheelMeasurement(vRearLeft, vRearRight, timestamp);
     kfOdometry.updateFrontWheelSteeringMeasurement(vFrontLeft, vFrontRight,
