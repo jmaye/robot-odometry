@@ -1,3 +1,9 @@
+robot-odometry (0.1-5) lucid; urgency=low
+
+  * modifiying pkg-config 
+
+ -- Jerome Maye <jerome.maye@mavt.ethz.ch>  Fri, 26 Jul 2013 13:56:31 +0200
+
 robot-odometry (0.1-4) lucid; urgency=low
 
   * changing dmi parameter 
