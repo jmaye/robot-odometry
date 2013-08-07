@@ -1,3 +1,9 @@
+robot-odometry (0.1-6) lucid; urgency=low
+
+  * correcting a mistake in anglemod
+
+ -- Jerome Maye <jerome.maye@mavt.ethz.ch>  Wed, 07 Aug 2013 23:15:11 +0200
+
 robot-odometry (0.1-5) lucid; urgency=low
 
   * modifiying pkg-config 

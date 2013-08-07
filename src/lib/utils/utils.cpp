@@ -47,7 +47,7 @@ namespace janeth {
   }
 
   double angleMod(double radians) {
-    return (double)(radians - (2.0 / M_PI * std::round(radians / 2.0 / M_PI)));
+    return atan2(sin(radians), cos(radians));
   }
 
 }

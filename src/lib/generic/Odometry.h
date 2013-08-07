@@ -77,7 +77,7 @@ namespace janeth {
     virtual void reset(const Eigen::Vector3d& initialPose =
       Eigen::Vector3d::Zero(), double initialTimestamp = 0);
     /// Inserts a new pose
-    void insertPose(const Eigen::Vector3d& pose, double timestamp);;
+    void insertPose(const Eigen::Vector3d& pose, double timestamp);
     /** @}
       */
 
