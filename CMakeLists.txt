@@ -70,3 +70,11 @@ remake_distribute_deb(
   DEPENDS remake doxygen pkg-config libeigen3-dev
   PASS CMAKE_BUILD_TYPE ROBOT_ODOMETRY_GIT_REVISION
 )
+
+remake_distribute_deb(
+  DISTRIBUTION trusty
+  SECTION libs
+  UPLOAD ppa:jmaye/ethz
+  DEPENDS remake doxygen pkg-config libeigen3-dev
+  PASS CMAKE_BUILD_TYPE ROBOT_ODOMETRY_GIT_REVISION
+)

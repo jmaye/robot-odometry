@@ -1,3 +1,9 @@
+robot-odometry (0.1-7) precise; urgency=low
+
+  * porting to trusty 
+
+ -- Jerome Maye <jerome.maye@mavt.ethz.ch>  Tue, 29 Jul 2014 13:45:05 +0200
+
 robot-odometry (0.1-6) lucid; urgency=low
 
   * correcting a mistake in anglemod
